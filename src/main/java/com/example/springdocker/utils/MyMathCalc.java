@@ -1,4 +1,4 @@
-package com.example.springdocker.model;
+package com.example.springdocker.utils;
 
 public class MyMathCalc {
 
