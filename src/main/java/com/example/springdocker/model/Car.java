@@ -15,5 +15,5 @@ public class Car {
     String brand;
     String model;
     int modelYear;
-
+    boolean isAvailable;
 }
