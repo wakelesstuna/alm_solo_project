@@ -83,6 +83,8 @@ public class CarServiceTest {
         List<Car> actual = carService.getByBrand("Volvo");
 
         assertEquals(actual, Arrays.asList(car));
+
+        verify(mockRepository, times(1)).findAllByBrand(anyString());
     }
 
 
