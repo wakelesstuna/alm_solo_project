@@ -25,6 +25,16 @@ public class MyMathCalcTest {
     }
 
     @Test
+    void testSubtract() {
+        int expected = 1;
+        int notExpected = 1000;
+        int actual = myMathCalc.subtract(2,1);
+
+        assertEquals(expected,actual);
+        assertNotEquals(notExpected,actual);
+    }
+
+    @Test
     void testMultiply() {
         int expected = 10;
         int notExpected = 1000;
