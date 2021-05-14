@@ -13,6 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 public class FoodController {
+
     private final FoodService service;
 
     @GetMapping("/foods")
@@ -30,3 +31,4 @@ public class FoodController {
         return service.getCookableFoods();
     }
 }
+
