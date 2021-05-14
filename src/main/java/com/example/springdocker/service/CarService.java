@@ -13,7 +13,6 @@ public class CarService {
 
     private final CarRepository carRepository;
 
-
     public List<Car> getCars() {
         return carRepository.findAll();
     }
@@ -23,7 +22,6 @@ public class CarService {
     }
 
     public List<Car> getByBrand(String brand) {
-        return carRepository.findAllByBrand(brand)
-                .orElseThrow();
+        return carRepository.findAllByBrand(brand);
     }
 }
