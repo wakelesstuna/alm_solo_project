@@ -1,6 +1,7 @@
 package com.example.springdocker.utils;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,6 +15,7 @@ public class MyMathCalcTest {
         myMathCalc = new MyMathCalc();
     }
 
+    @DisplayName("Testing addition method")
     @Test
     void testAddition(){
         int expected = 2;
@@ -24,6 +26,7 @@ public class MyMathCalcTest {
         assertNotEquals(notExpected,actual);
     }
 
+    @DisplayName("Testing subtract method")
     @Test
     void testSubtract() {
         int expected = 1;
@@ -34,6 +37,7 @@ public class MyMathCalcTest {
         assertNotEquals(notExpected,actual);
     }
 
+    @DisplayName("Testing multiply method")
     @Test
     void testMultiply() {
         int expected = 10;
@@ -44,6 +48,7 @@ public class MyMathCalcTest {
         assertNotEquals(notExpected,actual);
     }
 
+    @DisplayName("Testing divide method")
     @Test
     void testDivide() {
         int expected = 5;
@@ -54,6 +59,7 @@ public class MyMathCalcTest {
         assertNotEquals(notExpected,actual);
     }
 
+    @DisplayName("Testing divide method with decimal outcome")
     @Test
     void testDivide2() {
         double expected = 0.2;
@@ -64,11 +70,9 @@ public class MyMathCalcTest {
         assertNotEquals(notExpected,actual);
     }
 
+    @DisplayName("Testing divide method, dividing with 0")
     @Test
     void testDivide3() {
         assertThrows(NumberFormatException.class,() -> myMathCalc.divide(10,0));
     }
-
-
-
 }
