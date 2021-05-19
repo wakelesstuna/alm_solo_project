@@ -1,4 +1,4 @@
-package com.example.springdocker.repository;
+/*package com.example.springdocker.repository;
 
 import com.example.springdocker.model.Food;
 import org.junit.jupiter.api.Test;
@@ -21,13 +21,14 @@ public class FoodRepositoryTest {
         mockFood.setId("1")
         .setName("Pizza")
         .setDelicious(true)
-        .setCanICookIt(true);
+        .setCamvnnICookIt(true);
 
         foodRepository.save(mockFood);
 
         List<Food> foodByCanICookIt = foodRepository.findFoodByCanICookIt(true);
+        System.out.println(foodByCanICookIt.get(0).getName());
 
         assertEquals(mockFood.getName(),foodByCanICookIt.get(0).getName());
     }
 
-}
+}*/
