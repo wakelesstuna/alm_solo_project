@@ -22,6 +22,7 @@ public class CarController {
 
     @PostMapping("/add")
     public Car saveNewFood(@RequestBody Car car) {
+
         return carService.saveNewCar(car);
     }
 
