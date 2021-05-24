@@ -16,7 +16,7 @@ jobs:
         run: echo Hello team!
 
       - name: step 2
-          run: echo bye bye
+        run: echo bye bye
 
       - name: print github secrets
         run: echo ${{ secrets.KEY }}
