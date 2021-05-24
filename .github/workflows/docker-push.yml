@@ -32,3 +32,9 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/alm-solo-project:v1.2
+
+      - name: upload jar file
+        uses: actions/upload-artifact@v2
+        with:
+          name: alm-solo-project.jar
+          path: target/*.jar
