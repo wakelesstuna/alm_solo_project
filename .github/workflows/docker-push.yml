@@ -29,7 +29,6 @@ jobs:
       - name: build and push
         uses: docker/build-push-action@v2
         with:
-          context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/alm-solo-project:v1.2
 
