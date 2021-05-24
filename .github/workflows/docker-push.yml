@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/ALM-solo-project:latest
+          tags: user/ALM-solo-project:latest
