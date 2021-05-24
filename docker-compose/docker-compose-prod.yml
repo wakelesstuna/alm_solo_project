@@ -13,7 +13,7 @@ services:
       MONGO_INITDB_DATABASE: prod_db
 
   spring_boot_app:
-    build: .
+    build: ..
     container_name: spring_boot_application
     ports:
       - 8080:8080
