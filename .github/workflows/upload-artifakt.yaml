@@ -1,0 +1,27 @@
+name: Upload artifakt
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: get code
+        uses: actions/checkout@v2
+
+      - name: get java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+
+      - name: build jar file
+        run: mvn clean install
+
+      - name: upload jar file
+        uses: actions/upload-artifact@v2
+        with:
+          name: alm-solo-project.jar
+          path: target/*.jar
